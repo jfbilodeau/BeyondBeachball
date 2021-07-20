@@ -1,6 +1,7 @@
 import com.soywiz.korge.scene.Module
 import com.soywiz.korinject.AsyncInjector
 import com.soywiz.korma.geom.SizeInt
+import scenes.LoadScene
 
 class GameModule : Module() {
     override val mainScene = LoadScene::class
