@@ -12,4 +12,6 @@ class Resources {
 
 class Game {
     val resources = Resources()
+    val mapper = gameObjectMapper()
+    var factory = EntityFactory()
 }

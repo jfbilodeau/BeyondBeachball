@@ -1,13 +1,8 @@
 import com.soywiz.korge.view.Sprite
-import org.jbox2d.common.Vec2
-import org.jbox2d.dynamics.Fixture
 
-abstract class Entity(val type: EntityType) : Sprite() {
-    var fixture: Fixture? = null
+open class Entity : Sprite() {
+    var id = 0
+    var type = ""
 
-    fun pointInside(x: Double, y: Double): Boolean {
-        return fixture?.testPoint(Vec2(x.toFloat(), y.toFloat())) ?: pointInside(x, y)
-    }
-
-    open fun update(game: Game) {}
+    open fun update() { /* Override as necessary */ }
 }
