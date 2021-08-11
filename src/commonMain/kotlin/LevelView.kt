@@ -69,7 +69,7 @@ class LevelView(val game: Game) : Container() {
 
     fun loadLevel(level: Level) {
         for (levelEntity in level.entities) {
-            val entity = game.createEntity(levelEntity)
+            val entity = game.factory.createEntity(levelEntity)
             addEntity(entity)
         }
     }
