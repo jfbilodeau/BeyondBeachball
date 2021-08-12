@@ -9,5 +9,7 @@ import com.soywiz.korio.file.std.resourcesVfs
 class LoadScene(val game: Game) : Scene() {
     override suspend fun Container.sceneInit() {
         game.resources.load()
+
+        sceneContainer.changeTo<PlayScene>()
     }
 }
