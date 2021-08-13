@@ -1,0 +1,7 @@
+<ktree width="146.0" height="146.0" gridWidth="20" gridHeight="20">
+	<image width="146.0" height="146.0" sourceFile="beachball.png"/>
+	<image x="500.0" y="260.0" anchorX="0.5" anchorY="0.5" width="512.0" height="512.0" sourceFile="korge.png">
+		<__ex_physics friction="0.2" restitution="0.2"/>
+	</image>
+	<__ex_physics type="DYNAMIC" friction="0.2" restitution="0.2"/>
+</ktree>
