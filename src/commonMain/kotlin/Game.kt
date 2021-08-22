@@ -4,9 +4,11 @@ import com.soywiz.korio.file.std.resourcesVfs
 
 class Resources {
     lateinit var beachball: Bitmap
+    lateinit var leftFlipper: Bitmap
 
     suspend fun load() {
         beachball = resourcesVfs["beachball.png"].readBitmap()
+        leftFlipper = resourcesVfs["left-flipper-200.png"].readBitmap()
     }
 }
 

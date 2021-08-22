@@ -3,12 +3,13 @@ package scenes
 import Game
 import com.soywiz.korge.box2d.*
 import com.soywiz.korge.scene.Scene
-import com.soywiz.korge.view.Container
-import com.soywiz.korge.view.SolidRect
+import com.soywiz.korge.view.*
 import com.soywiz.korge.view.ktree.KTreeRoot
 import com.soywiz.korge.view.ktree.readKTree
 import com.soywiz.korio.file.std.resourcesVfs
+import com.soywiz.korio.lang.Thread_sleep
 import entities.Beachball
+import entities.LeftFlipper
 import org.jbox2d.dynamics.BodyType
 
 class PlayScene(val game: Game) : Scene() {
@@ -36,21 +37,44 @@ class PlayScene(val game: Game) : Scene() {
 //        addChild(base)
         val scene = resourcesVfs["start.ktree"].readKTree(this) as KTreeRoot
 
+        val removeMe = mutableListOf<View>()
+
         for (child in scene.children) {
-            val body = createBody {
-                type = BodyType.STATIC
-            }.fixture {
-                shape = BoxShape(child.width / 20, child.height / 20)
+            when {
+                child is Image -> {
+                    when (child.sourceFile) {
+                        "left-flipper-200.png" -> {
+//                            child.removeFromParent()
+                            removeMe.add(child)
+                            val leftFlipper = LeftFlipper(scene, game)
+                            leftFlipper.xy(child.x, child.y)
+                            addChild(leftFlipper)
+                        }
+                    }
+                }
             }
 
-            body.view = child
+            if (removeMe.contains(child) == false) {
+                val body = createBody {
+                    type = BodyType.STATIC
+                }.fixture {
+                    shape = BoxShape(child.width / 20, child.height / 20)
+                }
+
+                body.view = child
+            }
+        }
+
+        removeMe.forEach {
+            scene.removeChild(it)
         }
 
         val ball = Beachball(this, game)
-        ball.body?.angularVelocity = 100.0f
+        ball.xy(600, 0)
+//        ball.body?.angularVelocity = MathUtils.PI
 //        ball.x = 100.0
 //        ball.y = 100.0
 
-        scene.addChild(ball)
+        addChild(ball)
     }
 }

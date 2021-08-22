@@ -7,7 +7,7 @@ import scenes.PlayScene
 
 class GameModule : Module() {
     override val mainScene = LoadScene::class
-    override val title = "Dimensional Miner"
+    override val title = "Beachball"
     override val size = SizeInt(1280, 768)
 
     override suspend fun AsyncInjector.configure() {
