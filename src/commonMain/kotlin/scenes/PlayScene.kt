@@ -7,9 +7,9 @@ import com.soywiz.korge.view.*
 import com.soywiz.korge.view.ktree.KTreeRoot
 import com.soywiz.korge.view.ktree.readKTree
 import com.soywiz.korio.file.std.resourcesVfs
-import com.soywiz.korio.lang.Thread_sleep
 import entities.Beachball
 import entities.LeftFlipper
+import entities.RightFlipper
 import org.jbox2d.dynamics.BodyType
 
 class PlayScene(val game: Game) : Scene() {
@@ -44,11 +44,16 @@ class PlayScene(val game: Game) : Scene() {
                 child is Image -> {
                     when (child.sourceFile) {
                         "left-flipper-200.png" -> {
-//                            child.removeFromParent()
                             removeMe.add(child)
                             val leftFlipper = LeftFlipper(scene, game)
                             leftFlipper.xy(child.x, child.y)
                             addChild(leftFlipper)
+                        }
+                        "right-flipper-200.png" -> {
+                            removeMe.add(child)
+                            val rightFlipper = RightFlipper(scene, game)
+                            rightFlipper.xy(child.x + rightFlipper.width, child.y)
+                            addChild(rightFlipper)
                         }
                     }
                 }
@@ -58,7 +63,7 @@ class PlayScene(val game: Game) : Scene() {
                 val body = createBody {
                     type = BodyType.STATIC
                 }.fixture {
-                    shape = BoxShape(child.width / 20, child.height / 20)
+                    shape = BoxShape(child.scaledWidth / 20, child.scaledHeight / 20)
                 }
 
                 body.view = child
@@ -70,11 +75,17 @@ class PlayScene(val game: Game) : Scene() {
         }
 
         val ball = Beachball(this, game)
-        ball.xy(600, 0)
+        ball.xy(200, 0)
 //        ball.body?.angularVelocity = MathUtils.PI
 //        ball.x = 100.0
 //        ball.y = 100.0
 
         addChild(ball)
+
+        addUpdater {
+            // TODO: Scroll when ball is closer to the edge
+            x = -ball.x + stage!!.width / 2
+            y = -ball.y + stage!!.height / 2
+        }
     }
 }

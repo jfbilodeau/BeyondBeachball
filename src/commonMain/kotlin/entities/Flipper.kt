@@ -32,7 +32,7 @@ class LeftFlipper(container: Container, game: Game) : Sprite(game.resources.left
         addFixedUpdater(60.timesPerSecond) {
             val input = stage?.input
 
-            if (input?.keys?.pressing(Key.LEFT_SHIFT) == true) {
+            if (input?.keys?.pressing(Key.A) == true) {
                 if (rotation > -30.0.degrees) {
 //                rotation = -30.0.degrees
                     body.angularVelocity = -10.0f
@@ -51,6 +51,42 @@ class LeftFlipper(container: Container, game: Game) : Sprite(game.resources.left
                     rotation = 30.0.degrees
                 }
 //                rotation = 30.0.degrees
+            }
+        }
+    }
+}
+
+class RightFlipper(container: Container, game: Game) : Sprite(game.resources.rightFlipper) {
+    init {
+//        anchor(20, bitmap.height / 2)
+//        anchorX = 1.0
+        anchorY = 0.5
+        rotation = 140.0.degrees
+        val body = container.createBody {
+            type = BodyType.KINEMATIC
+        }.fixture {
+            shape = BoxShape(bitmap.width / 20, bitmap.height / 20)
+            density = 1f
+            restitution = 1f
+        }
+
+        body.view = this
+
+        addFixedUpdater(60.timesPerSecond) {
+            val input = stage?.input
+
+            if (input?.keys?.pressing(Key.D) == true) {
+                if (rotation < 210.0.degrees) {
+                    body.angularVelocity = 10.0f
+                } else {
+                    rotation = 211.0.degrees
+                }
+            } else {
+                if (rotation > 150.0.degrees) {
+                    body.angularVelocity = -10.0f
+                } else {
+                    rotation = 150.0.degrees
+                }
             }
         }
     }

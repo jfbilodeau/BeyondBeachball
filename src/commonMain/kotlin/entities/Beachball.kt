@@ -25,7 +25,7 @@ class Beachball(container: Container, game: Game) : Sprite(game.resources.beachb
             shape = CircleShape(game.resources.beachball.width / 2 / 20)
 //            shape = BoxShape(game.resources.beachball.width / 2 / 20, game.resources.beachball.width / 2 / 20)
             density = 0.5f
-            restitution = 1f
+            restitution = 0.5f
             friction = 0.1f
 //            shape = BoxShape(game.resources.beachball.width, game.resources.beachball.height)
         }
