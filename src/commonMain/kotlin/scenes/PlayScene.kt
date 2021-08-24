@@ -7,9 +7,7 @@ import com.soywiz.korge.view.*
 import com.soywiz.korge.view.ktree.KTreeRoot
 import com.soywiz.korge.view.ktree.readKTree
 import com.soywiz.korio.file.std.resourcesVfs
-import entities.Beachball
-import entities.LeftFlipper
-import entities.RightFlipper
+import entities.*
 import org.jbox2d.dynamics.BodyType
 
 class PlayScene(val game: Game) : Scene() {
@@ -55,6 +53,17 @@ class PlayScene(val game: Game) : Scene() {
                             rightFlipper.xy(child.x + rightFlipper.width, child.y)
                             addChild(rightFlipper)
                         }
+                        "mouse-200.png" -> {
+                            removeMe.add(child)
+                            val mouse = Vehicle(scene, child)
+                            addChild(mouse)
+                        }
+
+                        "mouse-hole-exit-200.png" -> {
+                            removeMe.add(child)
+                            val tunnel = Tunnel(scene, child)
+                            addChild(tunnel)
+                        }
                     }
                 }
             }
@@ -84,8 +93,9 @@ class PlayScene(val game: Game) : Scene() {
 
         addUpdater {
             // TODO: Scroll when ball is closer to the edge
-            x = -ball.x + stage!!.width / 2
-            y = -ball.y + stage!!.height / 2
+//            x = -ball.x + stage!!.width / 2
+//            y = -ball.y + stage!!.height / 2
+            xy(-780, 1900)
         }
     }
 }

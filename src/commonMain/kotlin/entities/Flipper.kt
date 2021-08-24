@@ -58,8 +58,6 @@ class LeftFlipper(container: Container, game: Game) : Sprite(game.resources.left
 
 class RightFlipper(container: Container, game: Game) : Sprite(game.resources.rightFlipper) {
     init {
-//        anchor(20, bitmap.height / 2)
-//        anchorX = 1.0
         anchorY = 0.5
         rotation = 140.0.degrees
         val body = container.createBody {
