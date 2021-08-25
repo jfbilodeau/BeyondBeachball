@@ -30,7 +30,6 @@ class Tunnel(container: Container, oldImage: Image) : Sprite(oldImage.bitmap) {
 
                 it.x = entrance.x
             }
-            println("Collision: $it")
         }
     }
 }
