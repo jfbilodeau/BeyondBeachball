@@ -1,8 +1,8 @@
 package entities
 
 import Game
-import com.soywiz.korge.view.*
-import com.soywiz.korma.geom.vector.circle
+import com.soywiz.korge.view.Image
+import com.soywiz.korge.view.addUpdater
 import views.PlayField
 
 class Coin(game: Game, private val playField: PlayField, image: Image) : BaseEntity(playField, image) {

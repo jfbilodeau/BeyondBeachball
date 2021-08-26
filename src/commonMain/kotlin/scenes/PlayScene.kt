@@ -16,8 +16,8 @@ class PlayScene(val game: Game) : Scene() {
     val background = Sprite()
 
     override suspend fun Container.sceneInit() {
-        background.bitmap = resourcesVfs["sewers-background.png"].readBitmap().slice()
-        val scene = resourcesVfs["sewers.ktree"].readKTree(playField) as KTreeRoot
+        background.bitmap = resourcesVfs[game.currentLevel.background].readBitmap().slice()
+        val scene = resourcesVfs[game.currentLevel.ktree].readKTree(playField) as KTreeRoot
 
         playField.setLevel(scene)
 

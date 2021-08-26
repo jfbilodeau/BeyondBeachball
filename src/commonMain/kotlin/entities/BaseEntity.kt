@@ -22,7 +22,8 @@ open class BaseEntity(private val playField: PlayField, image: Image) : Sprite(i
             type = bodyType
         }.fixture {
             shape = BoxShape(bitmap.width / 20, bitmap.height / 20)
-            density = 1f
+            density = 1.0f
+            friction = 0.5f
             restitution = 0.5f
         }
 
@@ -32,13 +33,17 @@ open class BaseEntity(private val playField: PlayField, image: Image) : Sprite(i
     }
 
     fun createCircleBody(bodyType: BodyType): Body {
+        anchor(0.5, 0.5)
+        x += width / 2.0
+        y += height / 2.0
+
         val body = playField.createBody {
             type = bodyType
         }.fixture {
             shape = CircleShape(bitmap.width / 2 / 20)
-            density = 0.5f
+            density = 1.0f
+            friction = 0.5f
             restitution = 0.5f
-            friction = 0.1f
         }
 
         body.view = this

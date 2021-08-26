@@ -121,4 +121,5 @@
 	<text x="134.0" y="560.0" autoScaling="true" text="PRESS 'A'" textSize="48.0" verticalAlign="TOP" horizontalAlign="LEFT"/>
 	<text x="480.0" y="-100.0" autoScaling="true" text="PRESS 'D'" textSize="48.0" verticalAlign="TOP" horizontalAlign="LEFT"/>
 	<text x="-180.0" y="-2200.0" autoScaling="true" text="COLLECT ALL COINS TO EXIT" textSize="48.0" verticalAlign="TOP" horizontalAlign="LEFT"/>
+	<text x="1480.0" y="-3800.0" autoScaling="true" text="Oh hi!" textSize="48.0" verticalAlign="TOP" horizontalAlign="LEFT"/>
 </ktree>

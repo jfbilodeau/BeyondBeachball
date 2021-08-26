@@ -40,13 +40,9 @@ class Resources {
     }
 }
 
-class Level(val name: String, val ktree: String, val background: String, start: Point)
+class Level(val name: String, val intro: String, val ktree: String, val background: String, val start: Point)
 
 class Game {
-    fun nextLevel() {
-
-    }
-
     lateinit var views: Views
     val stageWidth = 1280
     val stageHeight = 768
@@ -58,9 +54,10 @@ class Game {
         get() = coins == maxCoins
 
     val levels = listOf(
-        Level("Sewers", "sewers.ktree", "sewers-background.png", Point(220.0, 0.0)),
-        Level("City", "city.ktree", "city-background.png", Point(0.0, 0.0)),
-        Level("Beach", "beach.ktree", "beach-background.png", Point(0.0, 0.0)),
+//        Level("Sewers", "sewer-intro.png", "sewers.ktree", "sewers-background.png", Point(-520.0, -2300.0)),
+//        Level("Sewers", "sewer-intro.ktree", "sewers.ktree", "sewers-background.png", Point(220.0, 0.0)),
+        Level("City", "city-intro.ktree", "city.ktree", "city-background.png", Point(0.0, 0.0)),
+        Level("Beach", "beach-intro.ktree", "beach.ktree", "beach-background.png", Point(0.0, 0.0)),
     )
 
     val currentLevel

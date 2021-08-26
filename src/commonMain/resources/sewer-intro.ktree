@@ -1,0 +1,5 @@
+<ktree width="1280.0" height="768.0" gridWidth="20" gridHeight="20">
+	<image width="1280.0" height="768.0" sourceFile="sewer-intro.png"/>
+	<text colorMul="#000000ff" x="40.0" y="480.0" rotation="-15.120000000000001" autoScaling="true" text="Oh no! The beachball fell in the sewers!" textSize="64.0" verticalAlign="TOP" horizontalAlign="LEFT"/>
+	<text x="38.0" y="478.0" rotation="-15.120000000000001" autoScaling="true" text="Oh no! The beachball fell in the sewers!" textSize="64.0" verticalAlign="TOP" horizontalAlign="LEFT"/>
+</ktree>

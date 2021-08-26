@@ -14,7 +14,6 @@ class PlayField(val game: Game) : Container() {
     fun setLevel(level: KTreeRoot) {
         val removeMe = mutableListOf<View>()
 
-
         for (child in level.children) {
             var createBody = false
 
@@ -96,7 +95,7 @@ class PlayField(val game: Game) : Container() {
             level.removeChild(it)
         }
 
-        beachBall.xy(220, 0)
+        beachBall.xy(game.currentLevel.start.x, game.currentLevel.start.y)
 
         addChild(beachBall)
 

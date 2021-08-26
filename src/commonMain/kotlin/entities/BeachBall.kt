@@ -24,13 +24,11 @@ class BeachBall(playField: PlayField, game: Game) : Sprite(game.resources.beachb
         val body = playField.createBody {
             type = BodyType.DYNAMIC
         }.fixture {
-            shape = CircleShape(game.resources.beachball.width / 2 / 20)
+            shape = CircleShape(width / 2 / 20)
             density = 0.5f
             restitution = 0.5f
             friction = 0.1f
         }
-
-//        hitShape2d = Shape2d.Circle(0.0, 0.0, width / 2.0)
 
         body.view = this
         this.body = body
