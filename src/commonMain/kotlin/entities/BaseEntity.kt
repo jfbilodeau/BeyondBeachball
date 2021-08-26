@@ -7,6 +7,7 @@ import com.soywiz.korge.box2d.view
 import com.soywiz.korge.view.*
 import com.soywiz.korma.geom.shape.Shape2d
 import org.jbox2d.collision.shapes.CircleShape
+import org.jbox2d.dynamics.Body
 import org.jbox2d.dynamics.BodyType
 import views.PlayField
 
@@ -16,7 +17,7 @@ open class BaseEntity(private val playField: PlayField, image: Image) : Sprite(i
         name = image.name
     }
 
-    fun createBoxBody(bodyType: BodyType) {
+    fun createBoxBody(bodyType: BodyType): Body {
         val body = playField.createBody {
             type = bodyType
         }.fixture {
@@ -26,9 +27,11 @@ open class BaseEntity(private val playField: PlayField, image: Image) : Sprite(i
         }
 
         body.view = this
+
+        return body
     }
 
-    fun createCircleBody(bodyType: BodyType) {
+    fun createCircleBody(bodyType: BodyType): Body {
         val body = playField.createBody {
             type = bodyType
         }.fixture {
@@ -39,6 +42,8 @@ open class BaseEntity(private val playField: PlayField, image: Image) : Sprite(i
         }
 
         body.view = this
+
+        return body
     }
 
     fun createBoxHitShape() {
@@ -46,7 +51,7 @@ open class BaseEntity(private val playField: PlayField, image: Image) : Sprite(i
     }
 
     fun createCircleHitShape() {
-        hitShape2d = Shape2d.Circle(0.0, 0.0, width / 2.0)
+        hitShape2d = Shape2d.Circle(scaledWidth / 2.0, scaledHeight / 2.0, scaledWidth / 2.0)
     }
 
     val touchingBeachBall: Boolean

@@ -14,7 +14,10 @@ class PlayField(val game: Game) : Container() {
     fun setLevel(level: KTreeRoot) {
         val removeMe = mutableListOf<View>()
 
+
         for (child in level.children) {
+            var createBody = false
+
             when {
                 child is Image -> {
                     when (child.sourceFile) {
@@ -32,7 +35,7 @@ class PlayField(val game: Game) : Container() {
                         }
                         "mouse-200.png" -> {
                             removeMe.add(child)
-                            val mouse = Vehicle(level, child)
+                            val mouse = Vehicle(this, child, game.resources.mouseSound)
                             addChild(mouse)
                         }
                         "mouse-hole-exit-200.png" -> {
@@ -56,11 +59,29 @@ class PlayField(val game: Game) : Container() {
                             val teleportDestination = TeleportDestination(this, child)
                             addChild(teleportDestination)
                         }
+                        "mushroom-200.png" -> {
+                            removeMe.add(child)
+                            val bumper = Bumper(this, child)
+                            addChild(bumper)
+                        }
+                        "manhole-300.png" -> {
+                            removeMe.add(child)
+                            val exit = Exit(this, child)
+                            addChild(exit)
+                        }
+                        else -> {
+                            createBody = child.sourceFile?.startsWith("bg_") == false
+                        }
                     }
+                }
+                child is Text -> {
+                    removeMe.add(child)
+                    val textEntity = TextEntity(this, child)
+                    addChild(textEntity)
                 }
             }
 
-            if (removeMe.contains(child) == false) {
+            if (createBody) {
                 val body = createBody {
                     type = BodyType.STATIC
                 }.fixture {
@@ -75,11 +96,7 @@ class PlayField(val game: Game) : Container() {
             level.removeChild(it)
         }
 
-//        val ball = Beachball(this, game)
-        beachBall.xy(200, 0)
-//        ball.body?.angularVelocity = MathUtils.PI
-//        ball.x = 100.0
-//        ball.y = 100.0
+        beachBall.xy(220, 0)
 
         addChild(beachBall)
 

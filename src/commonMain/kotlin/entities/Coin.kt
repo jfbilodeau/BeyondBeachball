@@ -15,6 +15,7 @@ class Coin(game: Game, private val playField: PlayField, image: Image) : BaseEnt
             if (touchingBeachBall) {
                 game.coins++
                 removeFromParent()
+                game.resources.coinSound.play(game.views.coroutineContext)
             }
         }
     }

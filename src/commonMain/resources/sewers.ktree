@@ -107,9 +107,18 @@
 	<image x="1620.0" y="-3840.0" scaleX="0.36585365853658536" scaleY="0.9" width="328.0" height="800.0" sourceFile="sewer-pipe.png"/>
 	<image x="1140.0" y="-3940.0" scaleY="0.36585365853658536" width="800.0" height="328.0" sourceFile="sewer-pipe-h.png"/>
 	<image name="teleport-1" x="-680.0" y="2460.0" width="200.0" height="200.0" sourceFile="teleport.png"/>
-	<image name="teleport-1-destination" x="1443.0" y="-3120.0" width="200.0" height="200.0" sourceFile="teleport-destination.png"/>
+	<image name="teleport-1-destination" x="1500.0" y="-3120.0" width="200.0" height="200.0" sourceFile="teleport-destination.png"/>
 	<image x="1980.0" y="-580.0" rotation="45.0" scaleX="0.36585365853658536" scaleY="0.32926829268292684" width="328.0" height="328.0" sourceFile="sewer-tip.png"/>
 	<image x="293.0" y="-2042.0" rotation="45.0" scaleX="0.36585365853658536" scaleY="0.32926829268292684" width="328.0" height="328.0" sourceFile="sewer-tip.png"/>
-	<image name="teleport-1" x="120.0" y="-480.0" width="200.0" height="200.0" sourceFile="teleport.png"/>
 	<image x="1480.0" y="-1480.0" width="200.0" height="200.0" sourceFile="mushroom-200.png"/>
+	<image x="-620.0" y="-1860.0" width="200.0" height="200.0" sourceFile="mushroom-200.png"/>
+	<image x="-1120.0" y="-740.0" width="200.0" height="200.0" sourceFile="mushroom-200.png"/>
+	<image x="-600.0" y="140.0" width="200.0" height="200.0" sourceFile="mushroom-200.png"/>
+	<image x="-560.0" y="-740.0" width="200.0" height="200.0" sourceFile="mushroom-200.png"/>
+	<image x="1340.0" y="200.0" width="200.0" height="200.0" sourceFile="mushroom-200.png"/>
+	<image x="636.0" y="320.5" scaleX="100.0" scaleY="100.0" width="1.0" height="1.0"/>
+	<image x="-740.0" y="-2240.0" width="200.0" height="90.0" sourceFile="bg_exit-200.png"/>
+	<text x="134.0" y="560.0" autoScaling="true" text="PRESS 'A'" textSize="48.0" verticalAlign="TOP" horizontalAlign="LEFT"/>
+	<text x="480.0" y="-100.0" autoScaling="true" text="PRESS 'D'" textSize="48.0" verticalAlign="TOP" horizontalAlign="LEFT"/>
+	<text x="-180.0" y="-2200.0" autoScaling="true" text="COLLECT ALL COINS TO EXIT" textSize="48.0" verticalAlign="TOP" horizontalAlign="LEFT"/>
 </ktree>

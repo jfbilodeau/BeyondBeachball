@@ -1,12 +1,10 @@
 package entities
 
 import Game
-import com.soywiz.korge.box2d.BoxShape
-import com.soywiz.korge.box2d.createBody
-import com.soywiz.korge.box2d.fixture
-import com.soywiz.korge.box2d.view
+import com.soywiz.korge.box2d.*
 import com.soywiz.korge.view.*
 import com.soywiz.korma.geom.radians
+import com.soywiz.korma.geom.shape.Shape2d
 import com.soywiz.korma.geom.vector.circle
 import org.jbox2d.collision.shapes.CircleShape
 import org.jbox2d.dynamics.BodyType
@@ -21,7 +19,7 @@ class BeachBall(playField: PlayField, game: Game) : Sprite(game.resources.beachb
         name = "beachball"
         anchor(0.5, 0.5)
         hitShape {
-            circle(0.0, 0.0, width / 2.0)
+            circle(width / 2.0, height / 2.0, width / 2.0)
         }
         val body = playField.createBody {
             type = BodyType.DYNAMIC
@@ -32,9 +30,12 @@ class BeachBall(playField: PlayField, game: Game) : Sprite(game.resources.beachb
             friction = 0.1f
         }
 
-        body.view = this
+//        hitShape2d = Shape2d.Circle(0.0, 0.0, width / 2.0)
 
-        addUpdater {
+        body.view = this
+        this.body = body
+
+//        addUpdater {
 //            if (body.m_contactList != null) {
 //                if (contact == false) {
 //                    when(Random.nextInt(1, 3)) {
@@ -48,6 +49,6 @@ class BeachBall(playField: PlayField, game: Game) : Sprite(game.resources.beachb
 //            } else {
 //                contact = false
 //            }
-        }
+//        }
     }
 }

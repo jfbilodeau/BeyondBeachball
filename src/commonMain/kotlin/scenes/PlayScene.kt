@@ -8,6 +8,7 @@ import com.soywiz.korge.view.ktree.readKTree
 import com.soywiz.korim.bitmap.slice
 import com.soywiz.korim.format.readBitmap
 import com.soywiz.korio.file.std.resourcesVfs
+import views.Hud
 import views.PlayField
 
 class PlayScene(val game: Game) : Scene() {
@@ -22,5 +23,6 @@ class PlayScene(val game: Game) : Scene() {
 
         addChild(background)
         addChild(playField)
+        addChild(Hud(this@PlayScene))
     }
 }
