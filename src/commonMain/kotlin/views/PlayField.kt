@@ -74,6 +74,11 @@ class PlayField(val game: Game) : Container() {
                             val house = Breakable(this, child)
                             addChild(house)
                         }
+                        "brick-50.png" -> {
+                            removeMe.add(child)
+                            val brick = Brick(this, child)
+                            addChild(brick)
+                        }
                         else -> {
                             createBody = child.sourceFile?.startsWith("bg_") == false
                         }
