@@ -1,0 +1,54 @@
+<ktree width="1280.0" height="768.0" gridWidth="20" gridHeight="20">
+	<image x="3900.0" y="-1460.0" width="800.0" height="242.0" sourceFile="bg_road.png"/>
+	<image x="2320.0" y="-1460.0" width="800.0" height="242.0" sourceFile="bg_road.png"/>
+	<image x="1260.0" y="540.0" width="597.0" height="657.0" sourceFile="appartment-2.png"/>
+	<image x="520.0" y="-520.0" width="300.0" height="275.0" sourceFile="mushroom-house-300.png"/>
+	<image x="60.0" y="660.0" rotation="29.999999999999996" width="444.0" height="103.0" sourceFile="barrier-3.png"/>
+	<image x="460.0" y="880.0" rotation="-29.999999999999996" width="444.0" height="103.0" sourceFile="barrier-3.png"/>
+	<image x="200.0" y="760.0" width="200.0" height="24.0" sourceFile="left-flipper-200.png"/>
+	<image x="500.0" y="760.0" scaleY="0.8333333333333334" width="200.0" height="24.0" sourceFile="right-flipper-200.png"/>
+	<image x="840.0" y="659.0" rotation="-29.999999999999996" width="444.0" height="103.0" sourceFile="barrier-3.png"/>
+	<image x="-320.0" rotation="29.999999999999996" width="444.0" height="103.0" sourceFile="barrier-3.png"/>
+	<image x="2460.0" y="-720.0" width="597.0" height="657.0" sourceFile="appartment-2.png"/>
+	<image x="1226.0" y="437.0" rotation="-29.999999999999996" width="444.0" height="103.0" sourceFile="barrier-3.png"/>
+	<image x="1600.0" y="220.0" rotation="-29.999999999999996" width="444.0" height="103.0" sourceFile="barrier-3.png"/>
+	<image x="1860.0" y="-60.0" width="597.0" height="657.0" sourceFile="appartment-2.png"/>
+	<image x="2640.0" y="-1940.0" width="749.0" height="587.0" sourceFile="bg_demolition-truck.png"/>
+	<image x="200.0" y="760.0" width="200.0" height="24.0" sourceFile="left-flipper-200.png"/>
+	<image x="1860.0" y="-700.0" rotation="-29.999999999999996" width="444.0" height="103.0" sourceFile="barrier-3.png"/>
+	<image x="2240.0" y="-920.0" rotation="-29.999999999999996" width="444.0" height="103.0" sourceFile="barrier-3.png"/>
+	<image x="2620.0" y="-1140.0" rotation="29.999999999999996" width="444.0" height="103.0" sourceFile="barrier-3.png"/>
+	<image x="3000.0" y="-920.0" rotation="29.999999999999996" scaleY="0.970873786407767" width="444.0" height="103.0" sourceFile="barrier-3.png"/>
+	<image x="3040.0" y="-480.0" width="800.0" height="798.0" sourceFile="bighouse.png"/>
+	<image x="3380.0" y="-700.0" rotation="29.999999999999996" scaleY="0.970873786407767" width="444.0" height="103.0" sourceFile="barrier-3.png"/>
+	<image x="3520.0" y="-600.0" width="200.0" height="24.0" sourceFile="left-flipper-200.png"/>
+	<image x="3800.0" y="-600.0" scaleY="0.8333333333333334" width="200.0" height="24.0" sourceFile="right-flipper-200.png"/>
+	<image x="3780.0" y="-480.0" rotation="-29.999999999999996" width="444.0" height="103.0" sourceFile="barrier-3.png"/>
+	<image x="3840.0" y="-600.0" width="800.0" height="798.0" sourceFile="bighouse.png"/>
+	<image x="4160.0" y="-700.0" rotation="-29.999999999999996" width="444.0" height="103.0" sourceFile="barrier-3.png"/>
+	<image x="4540.0" y="-1320.0" width="597.0" height="657.0" sourceFile="appartment-2.png"/>
+	<image x="4540.0" y="-1976.0" width="597.0" height="657.0" sourceFile="appartment-2.png"/>
+	<image x="3140.0" y="-2480.0" width="408.0" height="416.0" sourceFile="old-house.png"/>
+	<image x="2780.0" y="-2320.0" width="408.0" height="416.0" sourceFile="old-house.png"/>
+	<image x="3500.0" y="-2320.0" width="408.0" height="416.0" sourceFile="old-house.png"/>
+	<image x="3480.0" y="-2740.0" width="408.0" height="416.0" sourceFile="old-house.png"/>
+	<image x="3860.0" y="-2460.0" width="408.0" height="416.0" sourceFile="old-house.png"/>
+	<image x="2760.0" y="-2740.0" width="408.0" height="416.0" sourceFile="old-house.png"/>
+	<image x="2380.0" y="-2480.0" width="408.0" height="416.0" sourceFile="old-house.png"/>
+	<image x="3960.0" y="-3200.0" width="408.0" height="416.0" sourceFile="old-house.png"/>
+	<image x="4540.0" y="-2635.0" width="597.0" height="657.0" sourceFile="appartment-2.png"/>
+	<image x="3560.0" y="-3180.0" width="408.0" height="416.0" sourceFile="old-house.png"/>
+	<image x="3120.0" y="-2920.0" width="408.0" height="416.0" sourceFile="old-house.png"/>
+	<image x="4360.0" y="-3420.0" width="800.0" height="798.0" sourceFile="bighouse.png"/>
+	<image x="4360.0" y="-3821.0" width="800.0" height="798.0" sourceFile="bighouse.png"/>
+	<image x="4360.0" y="-4220.0" width="800.0" height="798.0" sourceFile="bighouse.png"/>
+	<image x="2700.0" y="-3160.0" width="408.0" height="416.0" sourceFile="old-house.png"/>
+	<image x="2320.0" y="-2900.0" width="408.0" height="416.0" sourceFile="old-house.png"/>
+	<image x="4180.0" y="-2660.0" scaleY="0.8333333333333334" width="200.0" height="24.0" sourceFile="right-flipper-200.png"/>
+	<image x="1860.0" y="-715.0" width="597.0" height="657.0" sourceFile="appartment-2.png"/>
+	<image x="3120.0" y="-1460.0" width="800.0" height="242.0" sourceFile="bg_road.png"/>
+	<image x="1520.0" y="-1460.0" width="800.0" height="242.0" sourceFile="bg_road.png"/>
+	<image x="1660.0" y="-2580.0" width="597.0" height="657.0" sourceFile="appartment-2.png"/>
+	<image x="1660.0" y="-3220.0" width="597.0" height="657.0" sourceFile="appartment-2.png"/>
+	<image x="-540.0" y="220.0" width="597.0" height="657.0" sourceFile="appartment-2.png"/>
+</ktree>

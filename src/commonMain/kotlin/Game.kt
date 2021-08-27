@@ -54,7 +54,7 @@ class Game {
         get() = coins == maxCoins
 
     val levels = listOf(
-//        Level("Sewers", "sewer-intro.png", "sewers.ktree", "sewers-background.png", Point(-520.0, -2300.0)),
+//        Level("Sewers", "sewer-intro.ktree", "sewers.ktree", "sewers-background.png", Point(-520.0, -2300.0)),
 //        Level("Sewers", "sewer-intro.ktree", "sewers.ktree", "sewers-background.png", Point(220.0, 0.0)),
         Level("City", "city-intro.ktree", "city.ktree", "city-background.png", Point(0.0, 0.0)),
         Level("Beach", "beach-intro.ktree", "beach.ktree", "beach-background.png", Point(0.0, 0.0)),

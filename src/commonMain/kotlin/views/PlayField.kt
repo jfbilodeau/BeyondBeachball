@@ -1,6 +1,7 @@
 package views
 
 import Game
+import com.soywiz.korev.Key
 import com.soywiz.korge.box2d.*
 import com.soywiz.korge.view.*
 import com.soywiz.korge.view.ktree.KTreeRoot
@@ -58,7 +59,7 @@ class PlayField(val game: Game) : Container() {
                             val teleportDestination = TeleportDestination(this, child)
                             addChild(teleportDestination)
                         }
-                        "mushroom-200.png" -> {
+                        "mushroom-200.png", "mushroom-house-300.png" -> {
                             removeMe.add(child)
                             val bumper = Bumper(this, child)
                             addChild(bumper)
@@ -67,6 +68,11 @@ class PlayField(val game: Game) : Container() {
                             removeMe.add(child)
                             val exit = Exit(this, child)
                             addChild(exit)
+                        }
+                        "old-house.png" -> {
+                            removeMe.add(child)
+                            val house = Breakable(this, child)
+                            addChild(house)
                         }
                         else -> {
                             createBody = child.sourceFile?.startsWith("bg_") == false
@@ -104,6 +110,10 @@ class PlayField(val game: Game) : Container() {
             x = -beachBall.x + game.stageWidth / 2
             y = -beachBall.y + game.stageHeight / 2
 //            xy(-780, 1900)
+
+            if (game.views.input.keys.pressing(Key.R)) {
+                beachBall.pos = game.currentLevel.start
+            }
         }
     }
 }

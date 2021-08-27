@@ -3,6 +3,7 @@ package entities
 import com.soywiz.korge.box2d.body
 import com.soywiz.korge.view.Image
 import com.soywiz.korge.view.addUpdater
+import com.soywiz.korge.view.anchor
 import com.soywiz.korim.color.Colors
 import com.soywiz.korim.color.toColorAdd
 import com.soywiz.korma.geom.cosine
@@ -12,6 +13,9 @@ import kotlin.random.Random
 
 class Bumper(playField: PlayField, image: Image) : BaseEntity(playField, image) {
     init {
+        anchor(0.5, 0.5)
+        x += width / 2
+        y += height / 2
         createCircleHitShape()
 
         addUpdater {

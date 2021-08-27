@@ -1,4 +1,5 @@
 <ktree width="1280.0" height="720.0" gridWidth="20" gridHeight="20">
+	<image x="-1240.0" y="-2260.0" scaleX="0.95" scaleY="0.6629834254143646" width="800.0" height="362.0" sourceFile="bg_exit.png"/>
 	<image x="-220.0" y="240.0" rotation="-45.0" scaleX="0.4268292682926829" scaleY="0.375" width="328.0" height="800.0" sourceFile="sewer-pipe.png"/>
 	<image y="-740.0" rotation="45.0" scaleX="0.36585365853658536" scaleY="0.44999999999999996" width="328.0" height="800.0" sourceFile="sewer-pipe.png"/>
 	<image x="2500.0" y="-120.0" scaleX="0.36585365853658536" scaleY="0.9" width="328.0" height="800.0" sourceFile="sewer-pipe.png"/>
@@ -117,9 +118,8 @@
 	<image x="-560.0" y="-740.0" width="200.0" height="200.0" sourceFile="mushroom-200.png"/>
 	<image x="1340.0" y="200.0" width="200.0" height="200.0" sourceFile="mushroom-200.png"/>
 	<image x="636.0" y="320.5" scaleX="100.0" scaleY="100.0" width="1.0" height="1.0"/>
-	<image x="-740.0" y="-2240.0" width="200.0" height="90.0" sourceFile="bg_exit-200.png"/>
 	<text x="134.0" y="560.0" autoScaling="true" text="PRESS 'A'" textSize="48.0" verticalAlign="TOP" horizontalAlign="LEFT"/>
 	<text x="480.0" y="-100.0" autoScaling="true" text="PRESS 'D'" textSize="48.0" verticalAlign="TOP" horizontalAlign="LEFT"/>
 	<text x="-180.0" y="-2200.0" autoScaling="true" text="COLLECT ALL COINS TO EXIT" textSize="48.0" verticalAlign="TOP" horizontalAlign="LEFT"/>
-	<text x="1480.0" y="-3800.0" autoScaling="true" text="Oh hi!" textSize="48.0" verticalAlign="TOP" horizontalAlign="LEFT"/>
+	<text x="1486.0" y="-3800.0" autoScaling="true" text="Oh hi!" textSize="48.0" verticalAlign="TOP" horizontalAlign="LEFT"/>
 </ktree>

@@ -25,7 +25,7 @@ class BeachBall(playField: PlayField, game: Game) : Sprite(game.resources.beachb
             type = BodyType.DYNAMIC
         }.fixture {
             shape = CircleShape(width / 2 / 20)
-            density = 0.5f
+            density = 1.0f
             restitution = 0.5f
             friction = 0.1f
         }

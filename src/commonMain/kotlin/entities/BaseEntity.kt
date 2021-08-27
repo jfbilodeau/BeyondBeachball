@@ -13,6 +13,8 @@ import views.PlayField
 
 open class BaseEntity(private val playField: PlayField, image: Image) : Sprite(image.bitmap) {
     init {
+        scaleX = image.scaleX
+        scaleY = image.scaleY
         xy(image)
         name = image.name
     }
@@ -21,7 +23,7 @@ open class BaseEntity(private val playField: PlayField, image: Image) : Sprite(i
         val body = playField.createBody {
             type = bodyType
         }.fixture {
-            shape = BoxShape(bitmap.width / 20, bitmap.height / 20)
+            shape = BoxShape(scaledWidth / 20, scaledHeight / 20)
             density = 1.0f
             friction = 0.5f
             restitution = 0.5f
@@ -52,7 +54,7 @@ open class BaseEntity(private val playField: PlayField, image: Image) : Sprite(i
     }
 
     fun createBoxHitShape() {
-        hitShape2d = Shape2d.Rectangle(0.0, 0.0, width, height)
+        hitShape2d = Shape2d.Rectangle(0.0, 0.0, scaledWidth, scaledHeight)
     }
 
     fun createCircleHitShape() {
