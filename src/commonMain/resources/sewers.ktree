@@ -88,7 +88,7 @@
 	<image x="-640.0" y="840.0" width="100.0" height="100.0" sourceFile="coin-placeholder.png"/>
 	<image x="-1387.0" y="380.0" width="200.0" height="24.0" sourceFile="left-flipper-200.png"/>
 	<image x="-1420.0" y="-200.0" width="100.0" height="100.0" sourceFile="coin-placeholder.png"/>
-	<image x="-600.0" y="-1080.0" width="100.0" height="100.0" sourceFile="coin-placeholder.png"/>
+	<image x="-603.0" y="-1080.0" width="100.0" height="100.0" sourceFile="coin-placeholder.png"/>
 	<image x="-540.0" y="-2540.0" width="300.0" height="303.0" sourceFile="manhole-300.png"/>
 	<image x="-1340.0" y="-2440.0" scaleY="0.36585365853658536" width="800.0" height="328.0" sourceFile="sewer-pipe-h.png"/>
 	<image x="-1000.0" y="-1820.0" width="100.0" height="100.0" sourceFile="coin-placeholder.png"/>

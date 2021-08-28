@@ -33,11 +33,15 @@ class PlayField(val game: Game) : Container() {
                             rightFlipper.xy(child.x + rightFlipper.width, child.y)
                             addChild(rightFlipper)
                         }
-                        "mouse-200.png" -> {
+                        "mouse-200.png",
+                        "car-1-320.png",
+                        "car-2-320.png",
+                        "car-3-320.png" -> {
                             removeMe.add(child)
                             val mouse = Vehicle(this, child, game.resources.mouseSound)
                             addChild(mouse)
                         }
+                        "car-exit.png",
                         "mouse-hole-exit-200.png" -> {
                             removeMe.add(child)
                             val tunnel = Tunnel(level, child)
@@ -59,25 +63,43 @@ class PlayField(val game: Game) : Container() {
                             val teleportDestination = TeleportDestination(this, child)
                             addChild(teleportDestination)
                         }
-                        "mushroom-200.png", "mushroom-house-300.png" -> {
+                        "mushroom-200.png",
+                        "mushroom-house-300.png",
+                        "seashell-bumper-2.png",
+                        "seashell-bumper.png" -> {
                             removeMe.add(child)
                             val bumper = Bumper(this, child)
                             addChild(bumper)
                         }
+                        "shark.png",
+                        "no-entry-300.png",
                         "manhole-300.png" -> {
                             removeMe.add(child)
-                            val exit = Exit(this, child)
+                            val exit = BlockedExit(this, child)
                             addChild(exit)
                         }
+                        "shell-1.png",
+                        "shell-2.png",
+                        "shell-3.png",
                         "old-house.png" -> {
                             removeMe.add(child)
                             val house = Breakable(this, child)
                             addChild(house)
                         }
-                        "brick-50.png" -> {
+                        "brick-80.png" -> {
                             removeMe.add(child)
                             val brick = Brick(this, child)
                             addChild(brick)
+                        }
+                        "spring.png" -> {
+                            removeMe.add(child)
+                            val spring = Spring(this, child)
+                            addChild(spring)
+                        }
+                        "water.png" -> {
+                            removeMe.add(child)
+                            val water = Water(this, child)
+                            addChild(water)
                         }
                         else -> {
                             createBody = child.sourceFile?.startsWith("bg_") == false
@@ -118,6 +140,13 @@ class PlayField(val game: Game) : Container() {
 
             if (game.views.input.keys.pressing(Key.R)) {
                 beachBall.pos = game.currentLevel.start
+            }
+            if (game.views.input.keys.pressing(Key.C)) {
+                forEachChild {
+                    if (it is Coin) {
+                        beachBall.pos = it.pos
+                    }
+                }
             }
         }
     }

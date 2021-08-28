@@ -42,7 +42,7 @@ open class BaseEntity(private val playField: PlayField, image: Image) : Sprite(i
         val body = playField.createBody {
             type = bodyType
         }.fixture {
-            shape = CircleShape(bitmap.width / 2 / 20)
+            shape = CircleShape(scaledHeight / 2.2 / 20.0)
             density = 1.0f
             friction = 0.5f
             restitution = 0.5f
@@ -58,7 +58,7 @@ open class BaseEntity(private val playField: PlayField, image: Image) : Sprite(i
     }
 
     fun createCircleHitShape() {
-        hitShape2d = Shape2d.Circle(scaledWidth / 2.0, scaledHeight / 2.0, scaledWidth / 2.0)
+        hitShape2d = Shape2d.Circle(scaledWidth / 2.0 - anchorX, scaledHeight / 2.0 - anchorY, scaledWidth / 2.0)
     }
 
     val touchingBeachBall: Boolean

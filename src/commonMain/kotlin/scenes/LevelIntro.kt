@@ -27,6 +27,7 @@ class LevelIntro(val game: Game) : Scene() {
             onClick {
                 enabled = false
                 text = "LOADING..."
+                game.reset()
                 sceneContainer.changeTo<PlayScene>()
             }
         }
