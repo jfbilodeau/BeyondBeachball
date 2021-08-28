@@ -33,12 +33,19 @@ class PlayField(val game: Game) : Container() {
                             rightFlipper.xy(child.x + rightFlipper.width, child.y)
                             addChild(rightFlipper)
                         }
+                        "fish.png",
                         "mouse-200.png",
                         "car-1-320.png",
                         "car-2-320.png",
                         "car-3-320.png" -> {
+                            val sound = when (child.sourceFile) {
+                                "fish.png" -> game.resources.fishSound
+                                "mouse-200.png" -> game.resources.mouseSound
+                                else -> game.resources.hornSound
+                            }
+
                             removeMe.add(child)
-                            val mouse = Vehicle(this, child, game.resources.mouseSound)
+                            val mouse = Vehicle(this, child, sound)
                             addChild(mouse)
                         }
                         "car-exit.png",

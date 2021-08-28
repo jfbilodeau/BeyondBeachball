@@ -31,6 +31,8 @@ class Breakable(playField: PlayField, image: Image) : BaseEntity(playField, imag
 
         addUpdater {
             if (touchingBeachBall) {
+                playField.game.resources.debrisSound.play(playField.game.views.coroutineContext)
+
                 for (i in 0..9) {
                     val debris = Debris(playField, image)
                     debris.x += Random.nextDouble(scaledWidth)

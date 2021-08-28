@@ -111,4 +111,7 @@
 	<image x="640.0" y="-2900.0" width="100.0" height="100.0" sourceFile="coin-placeholder.png"/>
 	<image x="860.0" y="-2180.0" width="100.0" height="100.0" sourceFile="coin-placeholder.png"/>
 	<image x="-20.0" y="-3640.0" width="1280.0" height="700.0" sourceFile="shark.png"/>
+	<image x="580.0" y="-820.0" width="291.0" height="177.0" sourceFile="fish.png"/>
+	<image name="fish-1-entrance" x="1280.0" y="-840.0" width="103.0" height="200.0" sourceFile="car-entrance.png"/>
+	<image name="fish-1" x="-100.0" y="-840.0" width="103.0" height="200.0" sourceFile="car-exit.png"/>
 </ktree>

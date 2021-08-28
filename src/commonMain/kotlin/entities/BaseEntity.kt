@@ -54,7 +54,7 @@ open class BaseEntity(private val playField: PlayField, image: Image) : Sprite(i
     }
 
     fun createBoxHitShape() {
-        hitShape2d = Shape2d.Rectangle(0.0, 0.0, scaledWidth, scaledHeight)
+        hitShape2d = Shape2d.Rectangle(-1.0, -1.0, scaledWidth + 2, scaledHeight + 2)
     }
 
     fun createCircleHitShape() {

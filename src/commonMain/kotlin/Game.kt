@@ -22,6 +22,10 @@ class Resources {
     lateinit var bumberSound3: Sound
     lateinit var mouseSound: Sound
     lateinit var coinSound: Sound
+    lateinit var fishSound: Sound
+    lateinit var hornSound: Sound
+    lateinit var springSound: Sound
+    lateinit var debrisSound: Sound
 
     suspend fun load() {
         coin = SpriteAnimation(resourcesVfs["coin-100.png"].readBitmap(), 100, 100, columns = 6)
@@ -37,6 +41,10 @@ class Resources {
         bumberSound3 = resourcesVfs["bounce-3.mp3"].readSound()
         mouseSound = resourcesVfs["mouse.mp3"].readSound()
         coinSound = resourcesVfs["coin.mp3"].readSound()
+        fishSound = resourcesVfs["bubbles.mp3"].readSound()
+        hornSound = resourcesVfs["car-horn.mp3"].readSound()
+        springSound = resourcesVfs["spring.mp3"].readSound()
+        debrisSound = resourcesVfs["debris.mp3"].readSound()
     }
 }
 
@@ -56,8 +64,8 @@ class Game {
 
     val levels = listOf(
 //        Level("Sewers", "sewer-intro.ktree", "sewers.ktree", "sewers-background.png", Point(-520.0, -2300.0)),
-//        Level("Sewers", "sewer-intro.ktree", "sewers.ktree", "sewers-background.png", Point(220.0, 0.0)),
-//        Level("City", "city-intro.ktree", "city.ktree", "city-background.png", Point(0.0, 0.0)),
+        Level("Sewers", "sewer-intro.ktree", "sewers.ktree", "sewers-background.png", Point(220.0, 0.0)),
+        Level("City", "city-intro.ktree", "city.ktree", "city-background.png", Point(0.0, 0.0)),
         Level("Beach", "beach-intro.ktree", "beach.ktree", "beach-background.png", Point(1470, -2400)),
     )
 

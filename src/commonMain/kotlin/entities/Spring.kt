@@ -11,6 +11,7 @@ class Spring(playField: PlayField, image: Image) : BaseEntity(playField, image) 
 
         addUpdater {
             if (touchingBeachBall) {
+                playField.game.resources.springSound.play(playField.game.views.coroutineContext)
                 playField.beachBall.body?.linearVelocityX = 0.0f
                 playField.beachBall.body?.linearVelocityY = -100.0f
             }
