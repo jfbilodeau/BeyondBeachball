@@ -30,13 +30,18 @@ class PlayScene(val game: Game) : Scene() {
 
         addUpdater {
             if (game.touchedExit && !exited) {
-                launch(playField.game.views.coroutineContext) {
-                    playField.game.currentLevelIndex++
+                launch(game.views.coroutineContext) {
+                    game.currentLevelIndex++
                     exited = true
 
-                    sceneContainer.changeTo<LevelIntro>()
+                    if (game.currentLevelIndex < game.levels.size) {
+                        sceneContainer.changeTo<LevelIntro>()
+                    } else {
+                        sceneContainer.changeTo<EndScene>()
+                    }
                 }
             }
         }
     }
 }
+

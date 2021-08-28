@@ -2,10 +2,7 @@ import com.soywiz.korge.scene.Module
 import com.soywiz.korge.view.views
 import com.soywiz.korinject.AsyncInjector
 import com.soywiz.korma.geom.SizeInt
-import scenes.LevelIntro
-import scenes.LoadScene
-import scenes.PlayScene
-import scenes.TitleScene
+import scenes.*
 
 class GameModule : Module() {
     val game = Game()
@@ -21,5 +18,6 @@ class GameModule : Module() {
         mapPrototype { PlayScene(get()) }
         mapPrototype { LevelIntro(get()) }
         mapPrototype { TitleScene(get()) }
+        mapPrototype { EndScene(get()) }
     }
 }
