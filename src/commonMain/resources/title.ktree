@@ -3,5 +3,6 @@
 	<text colorMul="#000000ff" x="200.0" y="20.0" autoScaling="true" text="Beachball Adventure" textSize="128.0" verticalAlign="TOP" horizontalAlign="LEFT"/>
 	<text colorMul="#ffca10ff" x="198.0" y="17.0" autoScaling="true" text="Beachball Adventure" textSize="128.0" verticalAlign="TOP" horizontalAlign="LEFT"/>
 	<text x="20.0" y="740.0" autoScaling="true" text="Copyright (c) 2021 Jean-Francois Bilodeau  (jfbilodeau@chronogears.com)" textSize="16.0" verticalAlign="TOP" horizontalAlign="LEFT"/>
-	<text x="20.0" y="668.0" autoScaling="true" text="2nd Korge GameJam Entry" textSize="48.0" verticalAlign="TOP" horizontalAlign="LEFT"/>
+	<text x="20.0" y="640.0" autoScaling="true" text="2nd Korge GameJam Entry" textSize="48.0" verticalAlign="TOP" horizontalAlign="LEFT"/>
+	<text x="20.0" y="720.0" autoScaling="true" text="https://github.com/jfbilodeau/BeachBall" textSize="16.0" verticalAlign="TOP" horizontalAlign="LEFT"/>
 </ktree>
