@@ -152,13 +152,13 @@
 	<image x="4540.0" y="-1220.0" width="597.0" height="657.0" sourceFile="appartment-2.png"/>
 	<image x="-40.0" y="-1680.0" width="100.0" height="100.0" sourceFile="coin-placeholder.png"/>
 	<image x="4020.0" y="-2620.0" width="100.0" height="100.0" sourceFile="coin-placeholder.png"/>
-	<image x="3310.0" y="-3250.0" width="100.0" height="100.0" sourceFile="coin-placeholder.png"/>
+	<image x="3310.0" y="-3250.0" width="100.0" height="100.0" sourceFile="coin-placeholder-static.png"/>
 	<image x="560.0" y="-2440.0" width="100.0" height="100.0" sourceFile="coin-placeholder.png"/>
 	<image x="-360.0" y="-3140.0" width="100.0" height="100.0" sourceFile="coin-placeholder.png"/>
-	<image x="-1448.0" y="-1000.0" width="100.0" height="100.0" sourceFile="coin-placeholder.png"/>
+	<image x="-1448.0" y="-1000.0" width="100.0" height="100.0" sourceFile="coin-placeholder-static.png"/>
 	<image x="-3640.0" y="-600.0" width="100.0" height="100.0" sourceFile="coin-placeholder.png"/>
 	<image x="-3452.0" y="-1099.0" width="100.0" height="100.0" sourceFile="coin-placeholder.png"/>
-	<image x="3300.0" y="-1680.0" width="100.0" height="100.0" sourceFile="coin-placeholder.png"/>
+	<image x="3300.0" y="-1680.0" width="100.0" height="100.0" sourceFile="coin-placeholder-static.png"/>
 	<image x="-140.0" y="-1480.0" width="300.0" height="275.0" sourceFile="mushroom-house-300.png"/>
 	<image x="400.0" y="620.0" width="100.0" height="100.0" sourceFile="coin-placeholder.png"/>
 	<image x="840.0" y="560.0" scaleY="0.8333333333333334" width="200.0" height="24.0" sourceFile="right-flipper-200.png"/>

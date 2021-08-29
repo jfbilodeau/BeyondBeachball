@@ -4,6 +4,7 @@ import com.soywiz.korge.box2d.body
 import com.soywiz.korge.view.Image
 import com.soywiz.korge.view.addUpdater
 import com.soywiz.korge.view.anchor
+import com.soywiz.korim.color.ColorAdd
 import com.soywiz.korim.color.Colors
 import com.soywiz.korim.color.toColorAdd
 import com.soywiz.korma.geom.cosine
@@ -29,7 +30,7 @@ class Bumper(playField: PlayField, image: Image) : BaseEntity(playField, image) 
                 playField.beachBall.body?.linearVelocityX = velX.toFloat()
                 playField.beachBall.body?.linearVelocityY = velY.toFloat()
 
-                colorAdd = Colors.YELLOW.toColorAdd()
+                colorAdd = ColorAdd(255, 255, 0, 0)
 
                 val sound = when (Random.nextInt(1, 3)) {
                     1 -> playField.game.resources.bounceSound1

@@ -24,6 +24,7 @@ class BlockedExit(playField: PlayField, image: Image) : BaseEntity(playField, im
                 alpha = 0.0
 
                 if (touchingBeachBall) {
+                    playField.beachBall.removeFromParent()
                     playField.game.touchedExit = true
                 }
             }

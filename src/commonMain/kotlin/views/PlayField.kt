@@ -54,7 +54,8 @@ class PlayField(val game: Game) : Container() {
                             val tunnel = Tunnel(level, child)
                             addChild(tunnel)
                         }
-                        "coin-placeholder.png" -> {
+                        "coin-placeholder.png",
+                        "coin-placeholder-static.png" -> {
                             removeMe.add(child)
                             val coin = Coin(game, this, child)
                             addChild(coin)

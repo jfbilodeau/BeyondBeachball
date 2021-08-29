@@ -45,7 +45,7 @@
 	<image x="2480.0" y="-920.0" rotation="45.0" scaleX="0.4268292682926829" scaleY="0.375" width="328.0" height="800.0" sourceFile="sewer-pipe.png"/>
 	<image x="2060.0" y="-600.0" scaleY="0.8333333333333334" width="200.0" height="24.0" sourceFile="right-flipper-200.png"/>
 	<image x="1900.0" y="-520.0" scaleX="0.36585365853658536" scaleY="0.9" width="328.0" height="800.0" sourceFile="sewer-pipe.png"/>
-	<image x="2540.0" y="540.0" rotation="45.0" scaleX="0.4268292682926829" scaleY="0.375" width="328.0" height="800.0" sourceFile="sewer-pipe.png"/>
+	<image x="2720.0" y="740.0" rotation="45.0" scaleX="0.4268292682926829" scaleY="0.375" width="328.0" height="800.0" sourceFile="sewer-pipe.png"/>
 	<image x="2320.0" y="740.0" rotation="45.0" scaleX="0.4268292682926829" scaleY="0.375" width="328.0" height="800.0" sourceFile="sewer-pipe.png"/>
 	<image x="2100.0" y="940.0" rotation="59.99999999999999" scaleX="0.4268292682926829" scaleY="0.375" width="328.0" height="800.0" sourceFile="sewer-pipe.png"/>
 	<image x="940.0" y="-520.0" rotation="-45.0" scaleX="0.4268292682926829" scaleY="0.375" width="328.0" height="800.0" sourceFile="sewer-pipe.png"/>
@@ -63,7 +63,7 @@
 	<image x="-1520.0" y="360.0" scaleX="0.36585365853658536" scaleY="0.9" width="328.0" height="800.0" sourceFile="sewer-pipe.png"/>
 	<image x="2200.0" y="-280.0" width="100.0" height="100.0" sourceFile="coin-placeholder.png"/>
 	<image x="-240.0" y="-2440.0" scaleY="0.36585365853658536" width="800.0" height="328.0" sourceFile="sewer-pipe-h.png"/>
-	<image x="-1280.0" y="-2440.0" rotation="45.0" scaleX="0.36585365853658536" scaleY="0.44999999999999996" width="328.0" height="800.0" sourceFile="sewer-pipe.png"/>
+	<image x="-1760.0" y="-2720.0" rotation="45.0" scaleX="0.36585365853658536" scaleY="0.44999999999999996" width="328.0" height="800.0" sourceFile="sewer-pipe.png"/>
 	<image x="120.0" y="-2760.0" scaleX="0.36585365853658536" scaleY="0.44999999999999996" width="328.0" height="800.0" sourceFile="sewer-pipe.png"/>
 	<image x="-1490.0" y="-1392.0" rotation="-45.0" scaleX="0.4268292682926829" scaleY="0.375" width="328.0" height="800.0" sourceFile="sewer-pipe.png"/>
 	<image x="-1500.0" y="-2120.0" scaleX="0.36585365853658536" scaleY="0.9" width="328.0" height="800.0" sourceFile="sewer-pipe.png"/>
@@ -90,7 +90,6 @@
 	<image x="-1420.0" y="-200.0" width="100.0" height="100.0" sourceFile="coin-placeholder.png"/>
 	<image x="-603.0" y="-1080.0" width="100.0" height="100.0" sourceFile="coin-placeholder.png"/>
 	<image x="-540.0" y="-2540.0" width="300.0" height="303.0" sourceFile="manhole-300.png"/>
-	<image x="-1340.0" y="-2440.0" scaleY="0.36585365853658536" width="800.0" height="328.0" sourceFile="sewer-pipe-h.png"/>
 	<image x="-1000.0" y="-1820.0" width="100.0" height="100.0" sourceFile="coin-placeholder.png"/>
 	<image x="-220.0" y="-480.0" scaleX="0.36585365853658536" scaleY="0.9" width="328.0" height="800.0" sourceFile="sewer-pipe.png"/>
 	<image x="-960.0" y="1720.0" scaleX="0.36585365853658536" scaleY="0.9" width="328.0" height="800.0" sourceFile="sewer-pipe.png"/>
@@ -122,4 +121,12 @@
 	<text x="480.0" y="-100.0" autoScaling="true" text="PRESS 'D'" textSize="48.0" verticalAlign="TOP" horizontalAlign="LEFT"/>
 	<text x="-180.0" y="-2200.0" autoScaling="true" text="COLLECT ALL COINS TO EXIT" textSize="48.0" verticalAlign="TOP" horizontalAlign="LEFT"/>
 	<text x="1486.0" y="-3800.0" autoScaling="true" text="Oh hi!" textSize="48.0" verticalAlign="TOP" horizontalAlign="LEFT"/>
+	<image x="-1680.0" y="-2760.0" rotation="45.0" scaleX="0.425" scaleY="0.3048780487804878" width="800.0" height="328.0" sourceFile="sewer-pipe-h.png"/>
+	<image x="-1440.0" y="-2600.0" rotation="45.0" scaleX="0.425" scaleY="0.3048780487804878" width="800.0" height="328.0" sourceFile="sewer-pipe-h.png"/>
+	<image x="-1340.0" y="-2440.0" scaleY="0.36585365853658536" width="800.0" height="328.0" sourceFile="sewer-pipe-h.png"/>
+	<image name="teleport-2-destination" x="-1700.0" y="-2560.0" width="200.0" height="200.0" sourceFile="teleport-destination.png"/>
+	<image name="teleport-2" x="2560.0" y="740.0" width="200.0" height="200.0" sourceFile="teleport.png"/>
+	<image x="2240.0" y="840.0" rotation="-59.99999999999999" scaleX="0.4268292682926829" scaleY="0.375" width="328.0" height="800.0" sourceFile="sewer-pipe.png"/>
+	<image x="2500.0" y="600.0" rotation="-59.99999999999999" scaleX="0.4268292682926829" scaleY="0.375" width="328.0" height="800.0" sourceFile="sewer-pipe.png"/>
+	<image x="-1940.0" y="-2580.0" rotation="38.879999999999995" width="800.0" height="328.0" sourceFile="sewer-pipe-h.png"/>
 </ktree>
