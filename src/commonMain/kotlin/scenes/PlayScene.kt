@@ -1,8 +1,9 @@
 package scenes
 
 import Game
+import com.soywiz.klock.seconds
+import com.soywiz.korge.scene.AlphaTransition
 import com.soywiz.korge.scene.Scene
-import com.soywiz.korge.scene.sceneContainer
 import com.soywiz.korge.view.*
 import com.soywiz.korge.view.ktree.KTreeRoot
 import com.soywiz.korge.view.ktree.readKTree
@@ -35,9 +36,9 @@ class PlayScene(val game: Game) : Scene() {
                     exited = true
 
                     if (game.currentLevelIndex < game.levels.size) {
-                        sceneContainer.changeTo<LevelIntro>()
+                        sceneContainer.changeTo<IntroScene>(transition = AlphaTransition, time = 0.5.seconds)
                     } else {
-                        sceneContainer.changeTo<EndScene>()
+                        sceneContainer.changeTo<EndScene>(transition = AlphaTransition, time = 2.seconds)
                     }
                 }
             }

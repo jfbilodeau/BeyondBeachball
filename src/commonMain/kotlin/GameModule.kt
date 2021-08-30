@@ -16,7 +16,7 @@ class GameModule : Module() {
         mapInstance( game )
         mapPrototype { LoadScene(get()) }
         mapPrototype { PlayScene(get()) }
-        mapPrototype { LevelIntro(get()) }
+        mapPrototype { IntroScene(get()) }
         mapPrototype { TitleScene(get()) }
         mapPrototype { EndScene(get()) }
     }
