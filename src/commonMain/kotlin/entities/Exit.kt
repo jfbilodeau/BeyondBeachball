@@ -7,8 +7,6 @@ import org.jbox2d.dynamics.BodyType
 import views.PlayField
 
 class BlockedExit(playField: PlayField, image: Image) : BaseEntity(playField, image) {
-    var exited = false
-
     init {
         val body = createCircleBody(BodyType.STATIC)
         createCircleHitShape()

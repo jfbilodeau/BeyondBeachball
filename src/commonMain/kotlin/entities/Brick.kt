@@ -7,11 +7,7 @@ import views.PlayField
 
 class Brick(playField: PlayField, image: Image) : BaseEntity(playField, image) {
     init {
-        val body = createBoxBody(BodyType.DYNAMIC)
+        createBoxBody(BodyType.DYNAMIC)
         createBoxHitShape()
-
-        addUpdater {
-
-        }
     }
 }

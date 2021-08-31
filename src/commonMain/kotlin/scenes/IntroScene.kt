@@ -21,7 +21,7 @@ class IntroScene(val game: Game) : Scene() {
     override suspend fun Container.sceneInit() {
         resourcesVfs[game.currentLevel.intro].readKTree(this)
 
-        val commandStart = uiButton {
+        uiButton {
             text = "START"
             xy(900, 680)
             size(300, 64)

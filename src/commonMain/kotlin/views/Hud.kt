@@ -9,8 +9,8 @@ import scenes.PlayScene
 
 class Hud(val playScene: PlayScene) : Container() {
     init {
-        val coinCount = Text("", 64.0)
-        val coinCountShadow = Text("", 64.0, Colors.BLACK).xy(2, 2)
+        val coinCount = Text("", 64.0).xy(10.0, 0.0)
+        val coinCountShadow = Text("", 64.0, Colors.BLACK).xy(12.0, 2.0)
 
         addChild(coinCountShadow)
         addChild(coinCount)

@@ -2,6 +2,8 @@ package scenes
 
 import Game
 import com.soywiz.klock.seconds
+import com.soywiz.korau.sound.readMusic
+import com.soywiz.korau.sound.readSound
 import com.soywiz.korge.scene.AlphaTransition
 import com.soywiz.korge.scene.Scene
 import com.soywiz.korge.view.*
@@ -29,11 +31,15 @@ class PlayScene(val game: Game) : Scene() {
         addChild(playField)
         addChild(Hud(this@PlayScene))
 
+        val music = resourcesVfs["Cephelopod.mp3"].readSound()
+        val channel = music.playForever(game.views.coroutineContext)
+
         addUpdater {
             if (game.touchedExit && !exited) {
                 launch(game.views.coroutineContext) {
                     game.currentLevelIndex++
                     exited = true
+                    channel.stop()
 
                     if (game.currentLevelIndex < game.levels.size) {
                         sceneContainer.changeTo<IntroScene>(transition = AlphaTransition, time = 0.5.seconds)

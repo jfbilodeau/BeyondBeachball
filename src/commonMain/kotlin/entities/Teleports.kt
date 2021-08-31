@@ -8,8 +8,8 @@ import views.PlayField
 class Teleport(playField: PlayField, image: Image) : BaseEntity(playField, image) {
     init {
         bitmap = Bitmaps.transparent
-        width = image.width
-        height = image.height
+        scaledWidth = image.width
+        scaledHeight = image.height
 
         createBoxHitShape()
 

@@ -4,6 +4,7 @@ import Game
 import com.soywiz.kmem.bit
 import com.soywiz.korau.sound.Sound
 import com.soywiz.korge.box2d.*
+import com.soywiz.korge.internal.KorgeUntested
 import com.soywiz.korge.view.*
 import org.jbox2d.dynamics.BodyType
 import views.PlayField

@@ -18,8 +18,8 @@ class PlayField(val game: Game) : Container() {
         for (child in level.children) {
             var createBody = false
 
-            when {
-                child is Image -> {
+            when (child) {
+                is Image -> {
                     when (child.sourceFile) {
                         "left-flipper-200.png" -> {
                             removeMe.add(child)
@@ -114,7 +114,7 @@ class PlayField(val game: Game) : Container() {
                         }
                     }
                 }
-                child is Text -> {
+                is Text -> {
                     removeMe.add(child)
                     val textEntity = TextEntity(this, child)
                     addChild(textEntity)
