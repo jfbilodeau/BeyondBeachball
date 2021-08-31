@@ -31,8 +31,8 @@ class PlayScene(val game: Game) : Scene() {
         addChild(playField)
         addChild(Hud(this@PlayScene))
 
-        val music = resourcesVfs["Cephelopod.mp3"].readMusic()
-        val channel = music.playForever()
+        val music = resourcesVfs["Cephelopod.mp3"].readSound()
+        val channel = music.playForever(game.views.coroutineContext)
 
         addUpdater {
             if (game.touchedExit && !exited) {
