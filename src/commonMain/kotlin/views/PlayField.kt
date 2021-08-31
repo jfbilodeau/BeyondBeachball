@@ -146,15 +146,20 @@ class PlayField(val game: Game) : Container() {
             y = -beachBall.y + game.stageHeight / 2
 //            xy(-780, 1900)
 
-            if (game.views.input.keys.pressing(Key.R)) {
+            val keys = game.views.input.keys
+
+            if (keys.pressing(Key.R)) {
                 beachBall.pos = game.currentLevel.start
             }
-            if (game.views.input.keys.pressing(Key.C)) {
+            if (keys.pressing(Key.C)) {
                 forEachChild {
                     if (it is Coin) {
                         beachBall.pos = it.pos
                     }
                 }
+            }
+            if (keys.pressing(Key.N)) {
+                game.touchedExit = true
             }
         }
     }

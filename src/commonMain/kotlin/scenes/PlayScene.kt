@@ -31,15 +31,16 @@ class PlayScene(val game: Game) : Scene() {
         addChild(playField)
         addChild(Hud(this@PlayScene))
 
-        val music = resourcesVfs["Cephelopod.mp3"].readSound()
-        val channel = music.playForever(game.views.coroutineContext)
+        val music = resourcesVfs["Cephelopod.mp3"].readMusic()
+        val channel = music.playForever()
 
         addUpdater {
             if (game.touchedExit && !exited) {
+                game.currentLevelIndex++
+                exited = true
+                channel.stop()
+
                 launch(game.views.coroutineContext) {
-                    game.currentLevelIndex++
-                    exited = true
-                    channel.stop()
 
                     if (game.currentLevelIndex < game.levels.size) {
                         sceneContainer.changeTo<IntroScene>(transition = AlphaTransition, time = 0.5.seconds)
