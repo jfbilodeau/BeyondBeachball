@@ -7,7 +7,7 @@ import scenes.*
 class GameModule : Module() {
     val game = Game()
     override val mainScene = LoadScene::class
-    override val title = "Beachball"
+    override val title = "Beyond Beachball"
     override val size = SizeInt(game.stageWidth, game.stageHeight)
 
     override suspend fun AsyncInjector.configure() {

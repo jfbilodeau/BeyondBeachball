@@ -78,8 +78,8 @@ class Game {
         BeyondLevel("tutorial.txt", "Follow the instructions. Ya can't go wrong", TimeSpan.NIL),
         BeyondLevel("hello-world.kt", "Every programmer begins here...", 60.seconds),
         BeyondLevel("Flipper.kt", "Every programmer begins here...", 60.seconds),
-        BeyondLevel("IntroScene.kt", "Every programmer begins here...", 60.seconds),
         BeyondLevel("BeachBall.kt", "Every programmer begins here...", 60.seconds),
+        BeyondLevel("IntroScene.kt", "Every programmer begins here...", 60.seconds),
     )
 
     val currentLevel

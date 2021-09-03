@@ -44,7 +44,7 @@ class CodeScene(val game: Game) : Scene() {
         space.autoSize
 
         val marginLeft = 32.0
-        val marginTop = 32.0
+        val marginTop = 40.0
 
         var x = marginLeft
         var y = marginTop
@@ -127,7 +127,7 @@ class CodeScene(val game: Game) : Scene() {
                 if (game.currentBeyondLevelIndex >= game.beyondLevels.size) {
                     sceneContainer.changeTo<BeyondEndScene>()
                 } else {
-                    sceneContainer.changeTo<BeyondIntroScene>(transition = AlphaTransition, time = 0.5.seconds)
+                    sceneContainer.changeTo<BeyondIntroScene>()
                 }
             }
         }

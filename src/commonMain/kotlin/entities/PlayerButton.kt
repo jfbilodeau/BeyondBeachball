@@ -50,8 +50,8 @@ class PlayerButton(val codeScene: CodeScene) : Container() {
                 if (x < 0) {
                     x = 0.0
                 }
-                if (y < 0) {
-                    y = 0.0
+                if (y < 22) {
+                    y = 22.0
                 }
 
                 if (x + width >= 1280) {

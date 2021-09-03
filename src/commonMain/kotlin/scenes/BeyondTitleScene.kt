@@ -42,7 +42,7 @@ class BeyondTitleScene(val game: Game) : Scene() {
     }
 
     override suspend fun Container.sceneInit() {
-        resourcesVfs["title.ktree"].readKTree(this)
+        resourcesVfs["beyond-title.ktree"].readKTree(this)
         background.bitmap = resourcesVfs["gpf.png"].readBitmapSlice()
 
         val error = resourcesVfs["error.mp3"].readSound()
