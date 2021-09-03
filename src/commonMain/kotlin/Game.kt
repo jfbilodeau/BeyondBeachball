@@ -1,3 +1,5 @@
+import com.soywiz.klock.TimeSpan
+import com.soywiz.klock.seconds
 import com.soywiz.korau.sound.Sound
 import com.soywiz.korau.sound.readSound
 import com.soywiz.korge.view.SpriteAnimation
@@ -6,7 +8,8 @@ import com.soywiz.korim.bitmap.Bitmap
 import com.soywiz.korim.format.readBitmap
 import com.soywiz.korio.file.std.resourcesVfs
 import com.soywiz.korma.geom.Point
-import kotlin.math.max
+import kotlin.time.Duration
+import kotlin.time.ExperimentalTime
 
 class Resources {
     lateinit var coin: SpriteAnimation
@@ -49,7 +52,7 @@ class Resources {
 }
 
 class Level(val name: String, val intro: String, val ktree: String, val background: String, val start: Point)
-class BeyondLevel(val filename: String, val description: String)
+class BeyondLevel @OptIn(ExperimentalTime::class) constructor(val filename: String, val description: String, duration: TimeSpan)
 
 class Game {
     lateinit var views: Views
@@ -57,7 +60,7 @@ class Game {
     val stageHeight = 768
 
     var currentLevelIndex = 0
-    val currentBeyondLevelIndex = 0
+    var currentBeyondLevelIndex = 0
     var maxCoins = 0
     var coins = 0
     val allCoinsCollected
@@ -72,8 +75,11 @@ class Game {
     )
 
     val beyondLevels = listOf(
-        BeyondLevel("tutorial.txt", "Follow the instructions. Ya can't go wrong"),
-        BeyondLevel("hello-world.kt", "Every programmer begins here..."),
+        BeyondLevel("tutorial.txt", "Follow the instructions. Ya can't go wrong", TimeSpan.NIL),
+        BeyondLevel("hello-world.kt", "Every programmer begins here...", 60.seconds),
+        BeyondLevel("Flipper.kt", "Every programmer begins here...", 60.seconds),
+        BeyondLevel("IntroScene.kt", "Every programmer begins here...", 60.seconds),
+        BeyondLevel("BeachBall.kt", "Every programmer begins here...", 60.seconds),
     )
 
     val currentLevel

@@ -7,6 +7,8 @@ import com.soywiz.korge.view.Container
 import com.soywiz.korge.view.addUpdater
 import com.soywiz.korge.view.collidesWithShape
 import com.soywiz.korge.view.size
+import com.soywiz.korim.color.RGBA
+import com.soywiz.korim.color.toColorAdd
 import com.soywiz.korma.geom.shape.Shape2d
 import scenes.CodeScene
 import scenes.TextToken
@@ -16,7 +18,9 @@ class PlayerButton(val codeScene: CodeScene) : Container() {
     var weight = 12.0
 
     val button = uiButton() {
+        text = " "
         size(10.0 + weight / 1000, 10.0 + weight / 1000)
+        colorAdd = RGBA(255, 0, 0, 0).toColorAdd()
     }
 
     init {
@@ -65,7 +69,8 @@ class PlayerButton(val codeScene: CodeScene) : Container() {
                             weight += child.weight
 //                            weight += 25
                             button.text = child.text
-                            child.removeFromParent()
+//                            child.removeFromParent()
+                            codeScene.removeToken(child)
 
                             button.size(10.0 + weight / 1000, 10.0 + weight / 1000)
                             hitShape2d = Shape2d.Rectangle(0.0, 0.0, width, height)

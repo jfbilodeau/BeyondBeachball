@@ -1,16 +1,17 @@
 package entities
 
 import Game
-import com.soywiz.korge.box2d.*
-import com.soywiz.korge.view.*
-import com.soywiz.korma.geom.radians
-import com.soywiz.korma.geom.shape.Shape2d
+import com.soywiz.korge.box2d.body
+import com.soywiz.korge.box2d.createBody
+import com.soywiz.korge.box2d.fixture
+import com.soywiz.korge.box2d.view
+import com.soywiz.korge.view.Sprite
+import com.soywiz.korge.view.anchor
+import com.soywiz.korge.view.hitShape
 import com.soywiz.korma.geom.vector.circle
 import org.jbox2d.collision.shapes.CircleShape
 import org.jbox2d.dynamics.BodyType
-import scenes.PlayScene
 import views.PlayField
-import kotlin.random.Random
 
 class BeachBall(playField: PlayField, game: Game) : Sprite(game.resources.beachball) {
     var contact = false
@@ -32,21 +33,5 @@ class BeachBall(playField: PlayField, game: Game) : Sprite(game.resources.beachb
 
         body.view = this
         this.body = body
-
-//        addUpdater {
-//            if (body.m_contactList != null) {
-//                if (contact == false) {
-//                    when(Random.nextInt(1, 3)) {
-//                        1 -> game.resources.bounceSound1.play(game.views.coroutineContext)
-//                        2 -> game.resources.bounceSound2.play(game.views.coroutineContext)
-//                        3 -> game.resources.bounceSound3.play(game.views.coroutineContext)
-//                    }
-//                }
-//
-//                contact = true
-//            } else {
-//                contact = false
-//            }
-//        }
     }
 }

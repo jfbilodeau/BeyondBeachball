@@ -129,7 +129,7 @@ class BeyondTitleScene(val game: Game) : Scene() {
 
             waitForNextStep()
 
-            sceneContainer.changeTo<CodeScene>()
+            sceneContainer.changeTo<BeyondIntroScene>()
         }
     }
 

@@ -9,7 +9,7 @@ class BeyondHud(val codeScene: CodeScene): Container() {
     init {
         val text = text("")
         addUpdater {
-            text.text = "${codeScene.tokenCount}, ${codeScene.button.weight}"
+            text.text = "Tokens: ${codeScene.pickupCount}/${codeScene.tokenCount}, ${codeScene.button.weight}"
         }
     }
 }

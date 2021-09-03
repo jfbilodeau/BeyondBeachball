@@ -6,11 +6,11 @@ Collect the smaller tokens such as dots.
 Then work your way up to larger stuff!
 Collect everything!
 
---> ... <--
+START HERE --> ... <--
 
 
 
 
 (Why is the button so small, you ask?
 Well, turns out the programmer used
-.width instead of .scaledWidth)
+.width instead of .scaledWidth. Duh!)
