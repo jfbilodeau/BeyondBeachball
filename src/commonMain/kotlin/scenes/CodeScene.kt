@@ -2,22 +2,23 @@ package scenes
 
 import Game
 import com.soywiz.korge.scene.Scene
-import com.soywiz.korge.view.Container
-import com.soywiz.korge.view.Sprite
-import com.soywiz.korge.view.Text
-import com.soywiz.korge.view.xy
+import com.soywiz.korge.view.*
 import com.soywiz.korim.font.readTtfFont
 import com.soywiz.korim.format.readBitmap
 import com.soywiz.korim.format.readBitmapSlice
 import com.soywiz.korio.file.std.resourcesVfs
 import entities.PlayerButton
+import views.BeyondHud
 
 class CodeScene(val game: Game) : Scene() {
-    val button = PlayerButton()
+    val button = PlayerButton(this)
+    val hud = BeyondHud(this)
     val garbage = Sprite()
     var tokenCount = 0
 
     override suspend fun Container.sceneInit() {
+        sprite(resourcesVfs["screen.png"].readBitmap()) {}
+
         val sourceCode = resourcesVfs[game.beyondLevels[game.currentBeyondLevelIndex].filename].readString()
 
         val font = resourcesVfs["font/Courier Regular.ttf"].readTtfFont()
@@ -78,10 +79,13 @@ class CodeScene(val game: Game) : Scene() {
             i++
         }
 
+        button.xy(game.stageWidth / 2 - button.width / 2, game.stageHeight / 2 - button.width / 2)
+
         garbage.bitmap = resourcesVfs["garbage-100.png"].readBitmapSlice()
         garbage.xy(1180, 0)
 
         addChild(button)
         addChild(garbage)
+        addChild(hud)
     }
 }

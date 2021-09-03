@@ -49,7 +49,7 @@ class Resources {
 }
 
 class Level(val name: String, val intro: String, val ktree: String, val background: String, val start: Point)
-class BeyondLevel(val name: String, val filename: String)
+class BeyondLevel(val filename: String, val description: String)
 
 class Game {
     lateinit var views: Views
@@ -72,7 +72,8 @@ class Game {
     )
 
     val beyondLevels = listOf(
-        BeyondLevel("Intro", "intro.kt")
+        BeyondLevel("tutorial.txt", "Follow the instructions. Ya can't go wrong"),
+        BeyondLevel("hello-world.kt", "Every programmer begins here..."),
     )
 
     val currentLevel

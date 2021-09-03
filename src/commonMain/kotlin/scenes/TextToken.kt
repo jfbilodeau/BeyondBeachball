@@ -6,7 +6,7 @@ import com.soywiz.korim.font.getTextBounds
 import com.soywiz.korma.geom.shape.Shape2d
 
 class TextToken(text: String, font: Font) : Text(text, 32.0, font = font) {
-    val weight = textBounds.area
+    var weight = 0.0
 
     init {
         val metrics = font.getTextBounds(32.0, text)
@@ -17,6 +17,8 @@ class TextToken(text: String, font: Font) : Text(text, 32.0, font = font) {
         val top = metrics.fontMetrics.ascent - metrics.drawTop //metrics.height - metrics.drawTop
         val width = metrics.width
         val height = metrics.height // metrics.ascent - metrics.descent
+
+        weight = metrics.width * metrics.height
 
         hitShape2d = Shape2d.Rectangle(
             left,

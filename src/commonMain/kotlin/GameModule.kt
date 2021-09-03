@@ -20,5 +20,7 @@ class GameModule : Module() {
         mapPrototype { TitleScene(get()) }
         mapPrototype { EndScene(get()) }
         mapPrototype { CodeScene(get()) }
+        mapPrototype { BeyondTitleScene(get()) }
+        mapPrototype { BeyondIntroScene(get()) }
     }
 }

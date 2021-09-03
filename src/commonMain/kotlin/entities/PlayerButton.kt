@@ -8,21 +8,22 @@ import com.soywiz.korge.view.addUpdater
 import com.soywiz.korge.view.collidesWithShape
 import com.soywiz.korge.view.size
 import com.soywiz.korma.geom.shape.Shape2d
+import scenes.CodeScene
 import scenes.TextToken
 
 @OptIn(KorgeInternal::class)
-class PlayerButton : Container() {
-    var weight = 400.0
+class PlayerButton(val codeScene: CodeScene) : Container() {
+    var weight = 12.0
 
     val button = uiButton() {
-        text = (weight / 100).toInt().toString()
-        size(10.0, 10.0)
+        size(10.0 + weight / 1000, 10.0 + weight / 1000)
     }
 
     init {
-        hitShape2d = Shape2d.Rectangle(0.0, 0.0, width, height)
-
         addUpdater {
+            if (!hitShape2d.closed) {
+                hitShape2d = Shape2d.Rectangle(0.0, 0.0, width, height)
+            }
             val oldX = x
             val oldY = y
 
@@ -49,16 +50,28 @@ class PlayerButton : Container() {
                     y = 0.0
                 }
 
+                if (x + width >= 1280) {
+                    x = 1280 - width
+                }
+
+                if (y + height >= 1280) {
+                    y = 1280 - height
+                }
+
                 for (child in parent?.children!!) {
-                    if (child != this && collidesWithShape(child)) {
-                        if (child is TextToken) {
-                            if (child.weight < weight) {
-                                weight += child.weight
-                                child.removeFromParent()
-                            } else {
-                                x = oldX
-                                y = oldY
-                            }
+                    if (child is TextToken && collidesWithShape(child)) {
+//                            println(child.weight)
+                        if (child.weight < weight) {
+                            weight += child.weight
+//                            weight += 25
+                            button.text = child.text
+                            child.removeFromParent()
+
+                            button.size(10.0 + weight / 1000, 10.0 + weight / 1000)
+                            hitShape2d = Shape2d.Rectangle(0.0, 0.0, width, height)
+                        } else {
+                            x = oldX
+                            y = oldY
                         }
                     }
                 }

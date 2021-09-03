@@ -1,0 +1,16 @@
+Let's clean up the code, Codamary Damacy Style!
+
+Use WASD to move.
+
+Collect the smaller tokens such as dots.
+Then work your way up to larger stuff!
+Collect everything!
+
+--> ... <--
+
+
+
+
+(Why is the button so small, you ask?
+Well, turns out the programmer used
+.width instead of .scaledWidth)
