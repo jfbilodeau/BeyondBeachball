@@ -49,6 +49,7 @@ class Resources {
 }
 
 class Level(val name: String, val intro: String, val ktree: String, val background: String, val start: Point)
+class BeyondLevel(val name: String, val filename: String)
 
 class Game {
     lateinit var views: Views
@@ -56,6 +57,7 @@ class Game {
     val stageHeight = 768
 
     var currentLevelIndex = 0
+    val currentBeyondLevelIndex = 0
     var maxCoins = 0
     var coins = 0
     val allCoinsCollected
@@ -67,6 +69,10 @@ class Game {
         Level("Sewers", "sewer-intro.ktree", "sewers.ktree", "sewers-background.png", Point(220.0, 0.0)),
         Level("City", "city-intro.ktree", "city.ktree", "city-background.png", Point(0.0, 0.0)),
         Level("Beach", "beach-intro.ktree", "beach.ktree", "beach-background.png", Point(1470, -2400)),
+    )
+
+    val beyondLevels = listOf(
+        BeyondLevel("Intro", "intro.kt")
     )
 
     val currentLevel

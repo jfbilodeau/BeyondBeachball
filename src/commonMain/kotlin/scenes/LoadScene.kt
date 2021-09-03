@@ -10,6 +10,6 @@ class LoadScene(val game: Game) : Scene() {
     override suspend fun Container.sceneInit() {
         game.resources.load()
 
-        sceneContainer.changeTo<TitleScene>()
+        sceneContainer.changeTo<CodeScene>()
     }
 }

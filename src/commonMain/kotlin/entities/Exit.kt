@@ -8,7 +8,7 @@ import views.PlayField
 
 class BlockedExit(playField: PlayField, image: Image) : BaseEntity(playField, image) {
     init {
-        val body = createCircleBody(BodyType.STATIC)
+        createCircleBody(BodyType.STATIC)
         createCircleHitShape()
 
         addUpdater {

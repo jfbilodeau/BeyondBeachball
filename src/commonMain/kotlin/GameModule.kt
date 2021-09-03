@@ -19,5 +19,6 @@ class GameModule : Module() {
         mapPrototype { IntroScene(get()) }
         mapPrototype { TitleScene(get()) }
         mapPrototype { EndScene(get()) }
+        mapPrototype { CodeScene(get()) }
     }
 }

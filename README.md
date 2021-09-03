@@ -1,4 +1,4 @@
-# Beachball Adventure
+# Behind Beachball
 
 My humble entry to the Korge Gamejam #2.
 
