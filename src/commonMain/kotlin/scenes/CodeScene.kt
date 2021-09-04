@@ -32,7 +32,7 @@ class CodeScene(val game: Game) : Scene() {
 
     override suspend fun Container.sceneInit() {
         pickupSound = resourcesVfs["pickup.wav"].readSound()
-        val music = resourcesVfs["music.wav"].readSound()
+        val music = resourcesVfs["music.mp3"].readSound()
         musicChannel = music.playForever(game.views.coroutineContext)
         sprite(resourcesVfs["screen.png"].readBitmap()) {}
 

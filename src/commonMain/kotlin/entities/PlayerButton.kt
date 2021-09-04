@@ -58,8 +58,8 @@ class PlayerButton(val codeScene: CodeScene) : Container() {
                     x = 1280 - width
                 }
 
-                if (y + height >= 1280) {
-                    y = 1280 - height
+                if (y + height >= 768) {
+                    y = 768 - height
                 }
 
                 for (child in parent?.children!!) {
