@@ -1,6 +1,6 @@
 Let's clean up the code, Codamary Damacy Style!
 
-Use WASD to move.
+Use W.A.S.D. to move.
 
 Collect the smaller tokens such as dots.
 Then work your way up to larger stuff!

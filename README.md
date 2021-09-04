@@ -1,4 +1,4 @@
-# Behind Beachball
+# Beyond Beachball
 
 My second entry to the Korge game jam. :D
 

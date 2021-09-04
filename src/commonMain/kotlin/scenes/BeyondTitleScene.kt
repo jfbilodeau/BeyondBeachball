@@ -7,20 +7,16 @@ import com.soywiz.korau.sound.readSound
 import com.soywiz.korge.input.onClick
 import com.soywiz.korge.scene.Scene
 import com.soywiz.korge.scene.delay
-import com.soywiz.korge.ui.UIButton
 import com.soywiz.korge.ui.UITextButton
 import com.soywiz.korge.ui.textSize
-import com.soywiz.korge.ui.uiButton
 import com.soywiz.korge.view.*
 import com.soywiz.korge.view.ktree.readKTree
 import com.soywiz.korim.color.Colors
 import com.soywiz.korim.format.readBitmapSlice
 import com.soywiz.korio.async.launch
 import com.soywiz.korio.file.std.resourcesVfs
-import com.soywiz.korio.lang.Thread_sleep
 import com.soywiz.korma.geom.degrees
-import com.soywiz.korma.geom.unaryMinus
-import com.soywiz.korui.UiButton
+import com.soywiz.korma.geom.plus
 import kotlinx.coroutines.yield
 import kotlin.random.Random
 
@@ -72,6 +68,7 @@ class BeyondTitleScene(val game: Game) : Scene() {
 
             loading()
 
+            button.rotation += 1.degrees
             button.text = "Nope. Try again."
             button.enabled = true
 
@@ -79,6 +76,7 @@ class BeyondTitleScene(val game: Game) : Scene() {
 
             loading()
 
+            button.rotation += 1.degrees
             button.text = "Oups! Something went wrong. Try again..."
             button.enabled = true
 
@@ -86,6 +84,7 @@ class BeyondTitleScene(val game: Game) : Scene() {
 
             loading()
 
+            button.rotation += 1.degrees
             error1.visible = true
             button.text = "WTH??? Try again I guess..."
             button.enabled = true
@@ -99,6 +98,8 @@ class BeyondTitleScene(val game: Game) : Scene() {
             button.enabled = true
 
             waitForNextStep()
+
+            loading()
 
             for (i in 1..100) {
                 val clone = error2.clone().xy(
