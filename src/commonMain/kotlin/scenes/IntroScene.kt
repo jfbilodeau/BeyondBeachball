@@ -3,11 +3,12 @@ package scenes
 import Game
 import com.soywiz.klock.seconds
 import com.soywiz.korge.input.onClick
-import com.soywiz.korge.scene.AlphaTransition
+import com.soywiz.korge.scene.MaskTransition
 import com.soywiz.korge.scene.Scene
 import com.soywiz.korge.ui.buttonBackColor
 import com.soywiz.korge.ui.uiButton
 import com.soywiz.korge.view.Container
+import com.soywiz.korge.view.filter.TransitionFilter
 import com.soywiz.korge.view.ktree.readKTree
 import com.soywiz.korge.view.size
 import com.soywiz.korge.view.xy
@@ -28,7 +29,7 @@ class IntroScene(val game: Game) : Scene() {
                 enabled = false
                 text = "LOADING..."
                 game.reset()
-                sceneContainer.changeTo<PlayScene>(transition = AlphaTransition, time = 0.5.seconds)
+                sceneContainer.changeTo<PlayScene>(transition = MaskTransition(TransitionFilter.Transition.DIAGONAL1), time = 0.5.seconds)
             }
         }
     }

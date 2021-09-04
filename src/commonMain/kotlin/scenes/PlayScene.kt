@@ -5,8 +5,10 @@ import com.soywiz.klock.seconds
 import com.soywiz.korau.sound.readMusic
 import com.soywiz.korau.sound.readSound
 import com.soywiz.korge.scene.AlphaTransition
+import com.soywiz.korge.scene.MaskTransition
 import com.soywiz.korge.scene.Scene
 import com.soywiz.korge.view.*
+import com.soywiz.korge.view.filter.TransitionFilter
 import com.soywiz.korge.view.ktree.KTreeRoot
 import com.soywiz.korge.view.ktree.readKTree
 import com.soywiz.korim.bitmap.slice
@@ -43,9 +45,9 @@ class PlayScene(val game: Game) : Scene() {
                 launch(game.views.coroutineContext) {
 
                     if (game.currentLevelIndex < game.levels.size) {
-                        sceneContainer.changeTo<IntroScene>(transition = AlphaTransition, time = 0.5.seconds)
+                        sceneContainer.changeTo<IntroScene>(transition = MaskTransition(TransitionFilter.Transition.DIAGONAL1), time = 0.5.seconds)
                     } else {
-                        sceneContainer.changeTo<EndScene>(transition = AlphaTransition, time = 2.seconds)
+                        sceneContainer.changeTo<EndScene>(transition = MaskTransition(TransitionFilter.Transition.HORIZONTAL), time = 2.seconds)
                     }
                 }
             }
