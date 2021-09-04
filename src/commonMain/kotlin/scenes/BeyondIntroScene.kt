@@ -4,12 +4,14 @@ import Game
 import com.soywiz.klock.seconds
 import com.soywiz.korge.input.onClick
 import com.soywiz.korge.scene.AlphaTransition
+import com.soywiz.korge.scene.MaskTransition
 import com.soywiz.korge.scene.Scene
 import com.soywiz.korge.tween.get
 import com.soywiz.korge.tween.tween
 import com.soywiz.korge.ui.buttonBackColor
 import com.soywiz.korge.ui.uiButton
 import com.soywiz.korge.view.*
+import com.soywiz.korge.view.filter.TransitionFilter
 import com.soywiz.korge.view.tween.scaleTo
 import com.soywiz.korim.color.Colors
 import com.soywiz.korim.color.RGBA
@@ -39,7 +41,7 @@ class BeyondIntroScene(val game: Game) : Scene() {
                 launch(game.views.coroutineContext) {
                     text = ""
                     tween(this::width[10], this::height[10])
-                    sceneContainer.changeTo<CodeScene>()
+                    sceneContainer.changeTo<CodeScene>(transition = MaskTransition(TransitionFilter.Transition.DIAGONAL1), time = 0.5.seconds)
                 }
             }
         }

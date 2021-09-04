@@ -77,7 +77,7 @@ class BeyondTitleScene(val game: Game) : Scene() {
             loading()
 
             button.rotation += 1.degrees
-            button.text = "Oups! Something went wrong. Try again..."
+            button.text = "Oops! Something went wrong. Try again..."
             button.enabled = true
 
             waitForNextStep()
